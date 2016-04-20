@@ -173,7 +173,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Check we have a valid camera target to follow */
         if let cameraTarget = cameraTarget {
             
-            /* Set camera postion to follow target horizontally, keep vertical locked */
+            /* Set camera position to follow target horizontally, keep vertical locked */
             camera?.position = CGPoint(x:cameraTarget.position.x, y:camera!.position.y)
             
             /* Clamp camera horizontal scrolling to our visible scene area only */
