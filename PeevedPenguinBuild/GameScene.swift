@@ -64,7 +64,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Load Level 1 */
-        let newLevel = SKReferenceNode(fileNamed: "Level1") as SKReferenceNode!
+        let resourcePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "sks")
+        let newLevel = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
         levelNode.addChild(newLevel)
         
         /* Create catapult arm physics body of type alpha */
@@ -123,7 +124,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 physicsWorld.addJoint(touchJoint!)
                 
                 /* Add a new penguin to the scene */
-                let penguin = MSReferenceNode(fileNamed: "Penguin") as MSReferenceNode!
+                let resourcePath = NSBundle.mainBundle().pathForResource("Penguin", ofType: "sks")
+                let penguin = MSReferenceNode(URL: NSURL (fileURLWithPath: resourcePath!))
                 addChild(penguin)
                 
                 /* Position penguin in the catapult bucket area */
