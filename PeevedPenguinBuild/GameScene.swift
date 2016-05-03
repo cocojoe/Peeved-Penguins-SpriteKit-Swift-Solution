@@ -241,7 +241,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Add particles to scene */
         addChild(particles)
         
-        /* Create our hero death action */
+        /* Play SFX */
+        let sealSFX = SKAction.playSoundFileNamed("sfx_seal", waitForCompletion: false)
+        self.runAction(sealSFX)
+        
+        /* Create our seal death action */
         let sealDeath = SKAction.runBlock({
             /* Remove seal node from scene */
             node.removeFromParent()

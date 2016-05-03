@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B11BE8B1CA2EA0A00408CFC /* Penguin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B11BE8A1CA2EA0A00408CFC /* Penguin.sks */; };
+		5B297DB01CD8D88C00636DCC /* sfx_seal.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B297DAF1CD8D88C00636DCC /* sfx_seal.caf */; };
 		5B515A2B1CB27D0700295F8A /* SealExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B515A291CB27D0700295F8A /* SealExplosion.sks */; };
 		5B515A2C1CB27D0700295F8A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B515A2A1CB27D0700295F8A /* spark.png */; };
 		5B71730C1CAA962F00B91F14 /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B71730B1CAA962F00B91F14 /* MainScene.sks */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		5B11BE8A1CA2EA0A00408CFC /* Penguin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Penguin.sks; sourceTree = "<group>"; };
+		5B297DAF1CD8D88C00636DCC /* sfx_seal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_seal.caf; sourceTree = "<group>"; };
 		5B515A291CB27D0700295F8A /* SealExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SealExplosion.sks; sourceTree = "<group>"; };
 		5B515A2A1CB27D0700295F8A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		5B71730B1CAA962F00B91F14 /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B297DAE1CD8D88C00636DCC /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				5B297DAF1CD8D88C00636DCC /* sfx_seal.caf */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
 		5B71730A1CAA901E00B91F14 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		5BE3570F1CA0247E004D1225 /* PeevedPenguinBuild */ = {
 			isa = PBXGroup;
 			children = (
+				5B297DAE1CD8D88C00636DCC /* SFX */,
 				5BCDD45B1CB2AD2F00CDA37E /* Helpers */,
 				5BE357101CA0247E004D1225 /* AppDelegate.swift */,
 				5BA034DC1CA185E900CFE912 /* assets.atlas */,
@@ -364,6 +375,7 @@
 				5B515A2C1CB27D0700295F8A /* spark.png in Resources */,
 				5BE3571C1CA0247E004D1225 /* Assets.xcassets in Resources */,
 				5BA034DB1CA184C100CFE912 /* Bear.sks in Resources */,
+				5B297DB01CD8D88C00636DCC /* sfx_seal.caf in Resources */,
 				5BE3571A1CA0247E004D1225 /* Main.storyboard in Resources */,
 				5B71730C1CAA962F00B91F14 /* MainScene.sks in Resources */,
 				5B8EACA01CA33A2D00E072E8 /* GameScene.sks in Resources */,
