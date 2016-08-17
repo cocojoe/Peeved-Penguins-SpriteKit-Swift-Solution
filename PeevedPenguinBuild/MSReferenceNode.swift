@@ -13,10 +13,10 @@ class MSReferenceNode: SKReferenceNode {
     /* Avatar node connection */
     var avatar: SKSpriteNode!
     
-    override init(fileNamed fileName: String?) {
-        super.init(fileNamed: fileName)
+    override init(url: URL?) {
+        super.init(url: url)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

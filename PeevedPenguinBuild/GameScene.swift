@@ -135,7 +135,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 physicsWorld.add(touchJoint!)
                 
                 /* Add a new penguin to the scene */
-                let penguin = MSReferenceNode(fileNamed: "Penguin")
+
+                let resourcePath = Bundle.main.path(forResource: "Penguin", ofType: "sks")
+                let penguin = MSReferenceNode (url: URL (fileURLWithPath: resourcePath!))
                 addChild(penguin)
                 
                 /* Position penguin in the catapult bucket area */
