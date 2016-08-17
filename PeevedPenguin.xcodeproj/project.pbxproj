@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5B11BE8B1CA2EA0A00408CFC /* Penguin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B11BE8A1CA2EA0A00408CFC /* Penguin.sks */; };
+		5B25B80C1D64A14300D31701 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8001D64A14300D31701 /* Vector3.swift */; };
+		5B25B80D1D64A14300D31701 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8011D64A14300D31701 /* SKTTimingFunctions.swift */; };
+		5B25B80E1D64A14300D31701 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8021D64A14300D31701 /* SKTEffects.swift */; };
+		5B25B80F1D64A14300D31701 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8031D64A14300D31701 /* SKTAudio.swift */; };
+		5B25B8101D64A14300D31701 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8041D64A14300D31701 /* SKNode+Extensions.swift */; };
+		5B25B8111D64A14300D31701 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8051D64A14300D31701 /* SKColor+Extensions.swift */; };
+		5B25B8121D64A14300D31701 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8061D64A14300D31701 /* SKAction+SpecialEffects.swift */; };
+		5B25B8131D64A14300D31701 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8071D64A14300D31701 /* SKAction+Extensions.swift */; };
+		5B25B8141D64A14300D31701 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8081D64A14300D31701 /* Int+Extensions.swift */; };
+		5B25B8151D64A14300D31701 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B8091D64A14300D31701 /* CGVector+Extensions.swift */; };
+		5B25B8161D64A14300D31701 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B80A1D64A14300D31701 /* CGPoint+Extensions.swift */; };
+		5B25B8171D64A14300D31701 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25B80B1D64A14300D31701 /* CGFloat+Extensions.swift */; };
 		5B297DB01CD8D88C00636DCC /* sfx_seal.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5B297DAF1CD8D88C00636DCC /* sfx_seal.caf */; };
 		5B515A2B1CB27D0700295F8A /* SealExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B515A291CB27D0700295F8A /* SealExplosion.sks */; };
 		5B515A2C1CB27D0700295F8A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B515A2A1CB27D0700295F8A /* spark.png */; };
@@ -20,18 +32,6 @@
 		5BA034DD1CA185E900CFE912 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5BA034DC1CA185E900CFE912 /* assets.atlas */; };
 		5BA456BA1CAB0CB7007A9219 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456B91CAB0CB7007A9219 /* MainScene.swift */; };
 		5BA456BC1CAB2509007A9219 /* MSReferenceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456BB1CAB2509007A9219 /* MSReferenceNode.swift */; };
-		5BA456CA1CAB255A007A9219 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456BE1CAB255A007A9219 /* CGFloat+Extensions.swift */; };
-		5BA456CB1CAB255A007A9219 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456BF1CAB255A007A9219 /* CGPoint+Extensions.swift */; };
-		5BA456CC1CAB255A007A9219 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C01CAB255A007A9219 /* CGVector+Extensions.swift */; };
-		5BA456CD1CAB255A007A9219 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C11CAB255A007A9219 /* Int+Extensions.swift */; };
-		5BA456CE1CAB255A007A9219 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C21CAB255A007A9219 /* SKAction+Extensions.swift */; };
-		5BA456CF1CAB255A007A9219 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C31CAB255A007A9219 /* SKAction+SpecialEffects.swift */; };
-		5BA456D01CAB255A007A9219 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C41CAB255A007A9219 /* SKColor+Extensions.swift */; };
-		5BA456D11CAB255A007A9219 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C51CAB255A007A9219 /* SKNode+Extensions.swift */; };
-		5BA456D21CAB255A007A9219 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C61CAB255A007A9219 /* SKTAudio.swift */; };
-		5BA456D31CAB255A007A9219 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C71CAB255A007A9219 /* SKTEffects.swift */; };
-		5BA456D41CAB255A007A9219 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C81CAB255A007A9219 /* SKTTimingFunctions.swift */; };
-		5BA456D51CAB255A007A9219 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA456C91CAB255A007A9219 /* Vector3.swift */; };
 		5BCDD45D1CB2C8C600CDA37E /* CharacterActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BCDD45C1CB2C8C600CDA37E /* CharacterActions.sks */; };
 		5BE357111CA0247E004D1225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE357101CA0247E004D1225 /* AppDelegate.swift */; };
 		5BE357151CA0247E004D1225 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE357141CA0247E004D1225 /* GameScene.swift */; };
@@ -39,29 +39,22 @@
 		5BE3571A1CA0247E004D1225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE357181CA0247E004D1225 /* Main.storyboard */; };
 		5BE3571C1CA0247E004D1225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE3571B1CA0247E004D1225 /* Assets.xcassets */; };
 		5BE3571F1CA0247E004D1225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE3571D1CA0247E004D1225 /* LaunchScreen.storyboard */; };
-		5BE3572A1CA0247E004D1225 /* PeevedPenguinBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE357291CA0247E004D1225 /* PeevedPenguinBuildTests.swift */; };
-		5BE357351CA0247E004D1225 /* PeevedPenguinBuildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE357341CA0247E004D1225 /* PeevedPenguinBuildUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5BE357261CA0247E004D1225 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BE357051CA0247E004D1225 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BE3570C1CA0247E004D1225;
-			remoteInfo = PeevedPenguinBuild;
-		};
-		5BE357311CA0247E004D1225 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BE357051CA0247E004D1225 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BE3570C1CA0247E004D1225;
-			remoteInfo = PeevedPenguinBuild;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B11BE8A1CA2EA0A00408CFC /* Penguin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Penguin.sks; sourceTree = "<group>"; };
+		5B25B8001D64A14300D31701 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		5B25B8011D64A14300D31701 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
+		5B25B8021D64A14300D31701 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
+		5B25B8031D64A14300D31701 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		5B25B8041D64A14300D31701 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B8051D64A14300D31701 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B8061D64A14300D31701 /* SKAction+SpecialEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SpecialEffects.swift"; sourceTree = "<group>"; };
+		5B25B8071D64A14300D31701 /* SKAction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B8081D64A14300D31701 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B8091D64A14300D31701 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B80A1D64A14300D31701 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		5B25B80B1D64A14300D31701 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		5B297DAF1CD8D88C00636DCC /* sfx_seal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_seal.caf; sourceTree = "<group>"; };
 		5B515A291CB27D0700295F8A /* SealExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SealExplosion.sks; sourceTree = "<group>"; };
 		5B515A2A1CB27D0700295F8A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
@@ -74,18 +67,6 @@
 		5BA034DC1CA185E900CFE912 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
 		5BA456B91CAB0CB7007A9219 /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		5BA456BB1CAB2509007A9219 /* MSReferenceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSReferenceNode.swift; sourceTree = "<group>"; };
-		5BA456BE1CAB255A007A9219 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456BF1CAB255A007A9219 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C01CAB255A007A9219 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C11CAB255A007A9219 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C21CAB255A007A9219 /* SKAction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C31CAB255A007A9219 /* SKAction+SpecialEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+SpecialEffects.swift"; sourceTree = "<group>"; };
-		5BA456C41CAB255A007A9219 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C51CAB255A007A9219 /* SKNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
-		5BA456C61CAB255A007A9219 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
-		5BA456C71CAB255A007A9219 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
-		5BA456C81CAB255A007A9219 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
-		5BA456C91CAB255A007A9219 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		5BCDD45C1CB2C8C600CDA37E /* CharacterActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CharacterActions.sks; sourceTree = "<group>"; };
 		5BE3570D1CA0247E004D1225 /* PeevedPenguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeevedPenguin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE357101CA0247E004D1225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,30 +76,14 @@
 		5BE3571B1CA0247E004D1225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE3571E1CA0247E004D1225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE357201CA0247E004D1225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BE357251CA0247E004D1225 /* PeevedPenguin.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeevedPenguin.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE357291CA0247E004D1225 /* PeevedPenguinBuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeevedPenguinBuildTests.swift; sourceTree = "<group>"; };
 		5BE3572B1CA0247E004D1225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BE357301CA0247E004D1225 /* PeevedPenguin.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeevedPenguin.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE357341CA0247E004D1225 /* PeevedPenguinBuildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeevedPenguinBuildUITests.swift; sourceTree = "<group>"; };
 		5BE357361CA0247E004D1225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5BE3570A1CA0247E004D1225 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE357221CA0247E004D1225 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE3572D1CA0247E004D1225 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,18 +122,18 @@
 		5BA456BD1CAB255A007A9219 /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
-				5BA456BE1CAB255A007A9219 /* CGFloat+Extensions.swift */,
-				5BA456BF1CAB255A007A9219 /* CGPoint+Extensions.swift */,
-				5BA456C01CAB255A007A9219 /* CGVector+Extensions.swift */,
-				5BA456C11CAB255A007A9219 /* Int+Extensions.swift */,
-				5BA456C21CAB255A007A9219 /* SKAction+Extensions.swift */,
-				5BA456C31CAB255A007A9219 /* SKAction+SpecialEffects.swift */,
-				5BA456C41CAB255A007A9219 /* SKColor+Extensions.swift */,
-				5BA456C51CAB255A007A9219 /* SKNode+Extensions.swift */,
-				5BA456C61CAB255A007A9219 /* SKTAudio.swift */,
-				5BA456C71CAB255A007A9219 /* SKTEffects.swift */,
-				5BA456C81CAB255A007A9219 /* SKTTimingFunctions.swift */,
-				5BA456C91CAB255A007A9219 /* Vector3.swift */,
+				5B25B8001D64A14300D31701 /* Vector3.swift */,
+				5B25B8011D64A14300D31701 /* SKTTimingFunctions.swift */,
+				5B25B8021D64A14300D31701 /* SKTEffects.swift */,
+				5B25B8031D64A14300D31701 /* SKTAudio.swift */,
+				5B25B8041D64A14300D31701 /* SKNode+Extensions.swift */,
+				5B25B8051D64A14300D31701 /* SKColor+Extensions.swift */,
+				5B25B8061D64A14300D31701 /* SKAction+SpecialEffects.swift */,
+				5B25B8071D64A14300D31701 /* SKAction+Extensions.swift */,
+				5B25B8081D64A14300D31701 /* Int+Extensions.swift */,
+				5B25B8091D64A14300D31701 /* CGVector+Extensions.swift */,
+				5B25B80A1D64A14300D31701 /* CGPoint+Extensions.swift */,
+				5B25B80B1D64A14300D31701 /* CGFloat+Extensions.swift */,
 			);
 			path = SKTUtils;
 			sourceTree = "<group>";
@@ -217,8 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				5BE3570D1CA0247E004D1225 /* PeevedPenguin.app */,
-				5BE357251CA0247E004D1225 /* PeevedPenguin.xctest */,
-				5BE357301CA0247E004D1225 /* PeevedPenguin.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,42 +245,6 @@
 			productReference = 5BE3570D1CA0247E004D1225 /* PeevedPenguin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5BE357241CA0247E004D1225 /* PeevedPenguinTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BE3573C1CA0247E004D1225 /* Build configuration list for PBXNativeTarget "PeevedPenguinTests" */;
-			buildPhases = (
-				5BE357211CA0247E004D1225 /* Sources */,
-				5BE357221CA0247E004D1225 /* Frameworks */,
-				5BE357231CA0247E004D1225 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BE357271CA0247E004D1225 /* PBXTargetDependency */,
-			);
-			name = PeevedPenguinTests;
-			productName = PeevedPenguinBuildTests;
-			productReference = 5BE357251CA0247E004D1225 /* PeevedPenguin.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5BE3572F1CA0247E004D1225 /* PeevedPenguinUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BE3573F1CA0247E004D1225 /* Build configuration list for PBXNativeTarget "PeevedPenguinUITests" */;
-			buildPhases = (
-				5BE3572C1CA0247E004D1225 /* Sources */,
-				5BE3572D1CA0247E004D1225 /* Frameworks */,
-				5BE3572E1CA0247E004D1225 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BE357321CA0247E004D1225 /* PBXTargetDependency */,
-			);
-			name = PeevedPenguinUITests;
-			productName = PeevedPenguinBuildUITests;
-			productReference = 5BE357301CA0247E004D1225 /* PeevedPenguin.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -325,19 +252,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Martin Walsh";
 				TargetAttributes = {
 					5BE3570C1CA0247E004D1225 = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					5BE357241CA0247E004D1225 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 5BE3570C1CA0247E004D1225;
-					};
-					5BE3572F1CA0247E004D1225 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 5BE3570C1CA0247E004D1225;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -355,8 +275,6 @@
 			projectRoot = "";
 			targets = (
 				5BE3570C1CA0247E004D1225 /* PeevedPenguin */,
-				5BE357241CA0247E004D1225 /* PeevedPenguinTests */,
-				5BE3572F1CA0247E004D1225 /* PeevedPenguinUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -383,20 +301,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BE357231CA0247E004D1225 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE3572E1CA0247E004D1225 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,56 +309,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE357151CA0247E004D1225 /* GameScene.swift in Sources */,
-				5BA456D41CAB255A007A9219 /* SKTTimingFunctions.swift in Sources */,
+				5B25B80F1D64A14300D31701 /* SKTAudio.swift in Sources */,
 				5BE357171CA0247E004D1225 /* GameViewController.swift in Sources */,
-				5BA456CC1CAB255A007A9219 /* CGVector+Extensions.swift in Sources */,
-				5BA456CB1CAB255A007A9219 /* CGPoint+Extensions.swift in Sources */,
-				5BA456CA1CAB255A007A9219 /* CGFloat+Extensions.swift in Sources */,
 				5BE357111CA0247E004D1225 /* AppDelegate.swift in Sources */,
-				5BA456D21CAB255A007A9219 /* SKTAudio.swift in Sources */,
 				5BA456BA1CAB0CB7007A9219 /* MainScene.swift in Sources */,
-				5BA456D11CAB255A007A9219 /* SKNode+Extensions.swift in Sources */,
-				5BA456CE1CAB255A007A9219 /* SKAction+Extensions.swift in Sources */,
-				5BA456CF1CAB255A007A9219 /* SKAction+SpecialEffects.swift in Sources */,
 				5B7173101CAAB1D800B91F14 /* MSButtonNode.swift in Sources */,
 				5BA456BC1CAB2509007A9219 /* MSReferenceNode.swift in Sources */,
-				5BA456D31CAB255A007A9219 /* SKTEffects.swift in Sources */,
-				5BA456CD1CAB255A007A9219 /* Int+Extensions.swift in Sources */,
-				5BA456D51CAB255A007A9219 /* Vector3.swift in Sources */,
-				5BA456D01CAB255A007A9219 /* SKColor+Extensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE357211CA0247E004D1225 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BE3572A1CA0247E004D1225 /* PeevedPenguinBuildTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BE3572C1CA0247E004D1225 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BE357351CA0247E004D1225 /* PeevedPenguinBuildUITests.swift in Sources */,
+				5B25B8121D64A14300D31701 /* SKAction+SpecialEffects.swift in Sources */,
+				5B25B8111D64A14300D31701 /* SKColor+Extensions.swift in Sources */,
+				5B25B8141D64A14300D31701 /* Int+Extensions.swift in Sources */,
+				5B25B8171D64A14300D31701 /* CGFloat+Extensions.swift in Sources */,
+				5B25B8131D64A14300D31701 /* SKAction+Extensions.swift in Sources */,
+				5B25B8161D64A14300D31701 /* CGPoint+Extensions.swift in Sources */,
+				5B25B80D1D64A14300D31701 /* SKTTimingFunctions.swift in Sources */,
+				5B25B8151D64A14300D31701 /* CGVector+Extensions.swift in Sources */,
+				5B25B8101D64A14300D31701 /* SKNode+Extensions.swift in Sources */,
+				5B25B80E1D64A14300D31701 /* SKTEffects.swift in Sources */,
+				5B25B80C1D64A14300D31701 /* Vector3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5BE357271CA0247E004D1225 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5BE3570C1CA0247E004D1225 /* PeevedPenguin */;
-			targetProxy = 5BE357261CA0247E004D1225 /* PBXContainerItemProxy */;
-		};
-		5BE357321CA0247E004D1225 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5BE3570C1CA0247E004D1225 /* PeevedPenguin */;
-			targetProxy = 5BE357311CA0247E004D1225 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5BE357181CA0247E004D1225 /* Main.storyboard */ = {
@@ -489,8 +364,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -534,8 +411,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -554,6 +433,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -567,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuild;
 				PRODUCT_NAME = PeevedPenguin;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -578,56 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuild;
 				PRODUCT_NAME = PeevedPenguin;
-			};
-			name = Release;
-		};
-		5BE3573D1CA0247E004D1225 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = PeevedPenguinBuildTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuildTests;
-				PRODUCT_NAME = PeevedPenguin;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeevedPenguin.app/PeevedPenguin";
-			};
-			name = Debug;
-		};
-		5BE3573E1CA0247E004D1225 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PeevedPenguinBuildTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuildTests;
-				PRODUCT_NAME = PeevedPenguin;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeevedPenguin.app/PeevedPenguin";
-			};
-			name = Release;
-		};
-		5BE357401CA0247E004D1225 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = PeevedPenguinBuildUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuildUITests;
-				PRODUCT_NAME = PeevedPenguin;
-				TEST_TARGET_NAME = PeevedPenguinBuild;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		5BE357411CA0247E004D1225 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PeevedPenguinBuildUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.PeevedPenguinBuildUITests;
-				PRODUCT_NAME = PeevedPenguin;
-				TEST_TARGET_NAME = PeevedPenguinBuild;
-				USES_XCTRUNNER = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -648,24 +480,6 @@
 			buildConfigurations = (
 				5BE3573A1CA0247E004D1225 /* Debug */,
 				5BE3573B1CA0247E004D1225 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BE3573C1CA0247E004D1225 /* Build configuration list for PBXNativeTarget "PeevedPenguinTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BE3573D1CA0247E004D1225 /* Debug */,
-				5BE3573E1CA0247E004D1225 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BE3573F1CA0247E004D1225 /* Build configuration list for PBXNativeTarget "PeevedPenguinUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BE357401CA0247E004D1225 /* Debug */,
-				5BE357411CA0247E004D1225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

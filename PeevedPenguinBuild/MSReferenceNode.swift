@@ -13,9 +13,17 @@ class MSReferenceNode: SKReferenceNode {
     /* Avatar node connection */
     var avatar: SKSpriteNode!
     
-    override func didLoadReferenceNode(node: SKNode?) {
+    override init(fileNamed fileName: String?) {
+        super.init(fileNamed: fileName)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func didLoad(_ node: SKNode?) {
         
         /* Set reference to avatar node */
-        avatar = childNodeWithName("//avatar") as! SKSpriteNode
+        avatar = childNode(withName: "//avatar") as! SKSpriteNode
     }
 }

@@ -7,6 +7,17 @@
 //
 
 import SpriteKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -29,18 +40,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var touchJoint: SKPhysicsJointSpring?
     var penguinJoint: SKPhysicsJointPin?
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Set reference to game object connections node */
-        catapultArm = childNodeWithName("catapultArm") as! SKSpriteNode
-        catapult = childNodeWithName("catapult") as! SKSpriteNode
-        cantileverNode = childNodeWithName("cantileverNode") as! SKSpriteNode
-        touchNode = childNodeWithName("touchNode") as! SKSpriteNode
+        catapultArm = childNode(withName: "catapultArm") as! SKSpriteNode
+        catapult = childNode(withName: "catapult") as! SKSpriteNode
+        cantileverNode = childNode(withName: "cantileverNode") as! SKSpriteNode
+        touchNode = childNode(withName: "touchNode") as! SKSpriteNode
         
         /* Set reference to the level loader node */
-        levelNode = childNodeWithName("//levelNode")
+        levelNode = childNode(withName: "//levelNode")
         
         /* Set UI connections */
-        buttonRestart = childNodeWithName("//buttonRestart") as! MSButtonNode
+        buttonRestart = childNode(withName: "//buttonRestart") as! MSButtonNode
         
         /* Setup restart button selection handler */
         buttonRestart.selectedHandler = {
@@ -52,20 +63,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let scene = GameScene(fileNamed:"GameScene") as GameScene!
             
             /* Ensure correct aspect mode */
-            scene.scaleMode = .AspectFit
+            scene?.scaleMode = .aspectFit
             
             /* Show debug */
-            skView.showsPhysics = true
-            skView.showsDrawCount = true
-            skView.showsFPS = false
+            skView?.showsPhysics = true
+            skView?.showsDrawCount = true
+            skView?.showsFPS = false
             
             /* Restart game scene */
-            skView.presentScene(scene)
+            skView?.presentScene(scene)
         }
         
         /* Load Level 1 */
-        let resourcePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "sks")
-        let newLevel = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
+        let resourcePath = Bundle.main.path(forResource: "Level1", ofType: "sks")
+        let newLevel = SKReferenceNode (url: URL (fileURLWithPath: resourcePath!))
         levelNode.addChild(newLevel)
         
         /* Create catapult arm physics body of type alpha */
@@ -84,12 +95,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catapultArm.physicsBody = catapultArmBody
         
         /* Pin joint catapult and catapult arm */
-        let catapultPinJoint = SKPhysicsJointPin.jointWithBodyA(catapult.physicsBody!, bodyB: catapultArm.physicsBody!, anchor: CGPoint(x:210 ,y:104))
-        physicsWorld.addJoint(catapultPinJoint)
+        let catapultPinJoint = SKPhysicsJointPin.joint(withBodyA: catapult.physicsBody!, bodyB: catapultArm.physicsBody!, anchor: CGPoint(x:210 ,y:104))
+        physicsWorld.add(catapultPinJoint)
         
         /* Spring joint catapult arm and cantilever node */
-        let catapultSpringJoint = SKPhysicsJointSpring.jointWithBodyA(catapultArm.physicsBody!, bodyB: cantileverNode.physicsBody!, anchorA: catapultArm.position + CGPoint(x:15, y:30), anchorB: cantileverNode.position)
-        physicsWorld.addJoint(catapultSpringJoint)
+        let catapultSpringJoint = SKPhysicsJointSpring.joint(withBodyA: catapultArm.physicsBody!, bodyB: cantileverNode.physicsBody!, anchorA: catapultArm.position + CGPoint(x:15, y:30), anchorB: cantileverNode.position)
+        physicsWorld.add(catapultSpringJoint)
         
         /* Make this joint a bit more springy */
         catapultSpringJoint.frequency = 1.5
@@ -101,17 +112,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         /* There will only be one touch as multi touch is not enabled by default */
         for touch in touches {
             
             /* Grab scene position of touch */
-            let location    = touch.locationInNode(self)
+            let location    = touch.location(in: self)
             
             /* Get node reference if we're touching a node */
-            let touchedNode = nodeAtPoint(location)
+            let touchedNode = atPoint(location)
             
             /* Is it the catapult arm? */
             if touchedNode.name == "catapultArm" {
@@ -120,12 +131,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 touchNode.position = location
                 
                 /* Spring joint touch node and catapult arm */
-                touchJoint = SKPhysicsJointSpring.jointWithBodyA(touchNode.physicsBody!, bodyB: catapultArm.physicsBody!, anchorA: location, anchorB: location)
-                physicsWorld.addJoint(touchJoint!)
+                touchJoint = SKPhysicsJointSpring.joint(withBodyA: touchNode.physicsBody!, bodyB: catapultArm.physicsBody!, anchorA: location, anchorB: location)
+                physicsWorld.add(touchJoint!)
                 
                 /* Add a new penguin to the scene */
-                let resourcePath = NSBundle.mainBundle().pathForResource("Penguin", ofType: "sks")
-                let penguin = MSReferenceNode(URL: NSURL (fileURLWithPath: resourcePath!))
+                let penguin = MSReferenceNode(fileNamed: "Penguin")
                 addChild(penguin)
                 
                 /* Position penguin in the catapult bucket area */
@@ -135,8 +145,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 penguin.avatar.physicsBody?.usesPreciseCollisionDetection = true
                 
                 /* Setup pin joint between penguin and catapult arm */
-                penguinJoint = SKPhysicsJointPin.jointWithBodyA(catapultArm.physicsBody!, bodyB: penguin.avatar.physicsBody!, anchor: penguin.avatar.position)
-                physicsWorld.addJoint(penguinJoint!)
+                penguinJoint = SKPhysicsJointPin.joint(withBodyA: catapultArm.physicsBody!, bodyB: penguin.avatar.physicsBody!, anchor: penguin.avatar.position)
+                physicsWorld.add(penguinJoint!)
                 
                 /* Remove any camera actions */
                 camera?.removeAllActions()
@@ -148,28 +158,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch moved */
         
         /* There will only be one touch as multi touch is not enabled by default */
         for touch in touches {
             
             /* Grab scene position of touch and update touchNode position */
-            let location       = touch.locationInNode(self)
+            let location       = touch.location(in: self)
             touchNode.position = location
             
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch ended */
         
         /* Let it fly!, remove joints used in catapult launch */
-        if let touchJoint = touchJoint { physicsWorld.removeJoint(touchJoint) }
-        if let penguinJoint = penguinJoint { physicsWorld.removeJoint(penguinJoint) }
+        if let touchJoint = touchJoint { physicsWorld.remove(touchJoint) }
+        if let penguinJoint = penguinJoint { physicsWorld.remove(penguinJoint) }
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         
         /* Check we have a valid camera target to follow */
@@ -179,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             camera?.position = CGPoint(x:cameraTarget.position.x, y:camera!.position.y)
             
             /* Clamp camera horizontal scrolling to our visible scene area only */
-            camera?.position.x.clamp(283, 677)
+            _ = camera?.position.x.clamp(677, 283)
             
             /* Check penguin has come to rest */
             if cameraTarget.physicsBody?.joints.count == 0 && cameraTarget.physicsBody?.velocity.length() < 0.18 {
@@ -192,17 +202,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 catapultArm.zRotation = 0
                 
                 /* Reset camera */
-                let cameraReset = SKAction.moveTo(CGPoint(x:284, y:camera!.position.y), duration: 1.5)
-                let cameraDelay = SKAction.waitForDuration(0.5)
+                let cameraReset = SKAction.move(to: CGPoint(x:284, y:camera!.position.y), duration: 1.5)
+                let cameraDelay = SKAction.wait(forDuration: 0.5)
                 let cameraSequence = SKAction.sequence([cameraDelay,cameraReset])
                 
-                camera?.runAction(cameraSequence)
+                camera?.run(cameraSequence)
             }
             
         }
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         /* Physics contact delegate implementation */
         
         /* Get references to the bodies involved in the collision */
@@ -226,14 +236,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func dieSeal(node: SKNode) {
+    func dieSeal(_ node: SKNode) {
         /* Seal death*/
         
         /* Load our particle effect */
         let particles = SKEmitterNode(fileNamed: "SealExplosion")!
         
         /* Convert node location (currently inside Level 1, to scene space) */
-        particles.position = convertPoint(node.position, fromNode: node)
+        particles.position = convert(node.position, from: node)
         
         /* Restrict total particles to reduce runtime of particle */
         particles.numParticlesToEmit = 25
@@ -243,15 +253,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Play SFX */
         let sealSFX = SKAction.playSoundFileNamed("sfx_seal", waitForCompletion: false)
-        self.runAction(sealSFX)
+        self.run(sealSFX)
         
         /* Create our seal death action */
-        let sealDeath = SKAction.runBlock({
+        let sealDeath = SKAction.run({
             /* Remove seal node from scene */
             node.removeFromParent()
         })
         
-        self.runAction(sealDeath)
+        self.run(sealDeath)
         
     }
     
